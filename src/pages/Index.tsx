@@ -2,18 +2,22 @@ import { Activity, Dumbbell, Target, Trophy } from "lucide-react";
 import { StatsCard } from "@/components/StatsCard";
 import { ActivityChart } from "@/components/ActivityChart";
 import { QuickActions } from "@/components/QuickActions";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-6">
+    <div className="min-h-screen bg-background text-foreground p-6">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Fitness Dashboard</h1>
-            <p className="text-gray-500">Track your progress and achieve your goals</p>
+            <h1 className="text-3xl font-bold">Fitness Dashboard</h1>
+            <p className="text-muted-foreground">Track your progress and achieve your goals</p>
           </div>
-          <QuickActions />
+          <div className="flex items-center gap-4">
+            <QuickActions />
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Stats Grid */}
