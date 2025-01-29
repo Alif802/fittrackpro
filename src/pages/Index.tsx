@@ -3,6 +3,7 @@ import { StatsCard } from "@/components/StatsCard";
 import { ActivityChart } from "@/components/ActivityChart";
 import { QuickActions } from "@/components/QuickActions";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { MobileNav } from "@/components/MobileNav";
 
 const Index = () => {
   return (
@@ -10,9 +11,12 @@ const Index = () => {
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold">Fitness Dashboard</h1>
-            <p className="text-muted-foreground">Track your progress and achieve your goals</p>
+          <div className="flex items-center gap-4">
+            <MobileNav />
+            <div>
+              <h1 className="text-3xl font-bold">Fitness Dashboard</h1>
+              <p className="text-muted-foreground">Track your progress and achieve your goals</p>
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <QuickActions />
