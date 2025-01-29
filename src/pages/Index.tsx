@@ -18,10 +18,15 @@ const Index = () => {
               <p className="text-muted-foreground">Track your progress and achieve your goals</p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4">
             <QuickActions />
             <ThemeToggle />
           </div>
+        </div>
+
+        {/* Quick Actions for Mobile */}
+        <div className="md:hidden">
+          <QuickActions />
         </div>
 
         {/* Stats Grid */}
